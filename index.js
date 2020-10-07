@@ -64,7 +64,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
+function is31Flavors(arr){
+    if (arr.length=31){return(true)}
+    else return(false)
    /*your code here*/
 }
 
@@ -81,8 +83,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(arr, fla){
+   arr.unshift(fla)
+   return(arr)
 }
 
 
@@ -97,8 +100,9 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(arr){
+   arr.pop()
+   return(arr)
 }
 
 
@@ -113,8 +117,8 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(arr, ind){
+    return(arr[ind])
 }
 
 
@@ -132,8 +136,10 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(arr,flav){
+    let n=arr.indexOf(flav);
+    arr.splice(n,1)
+return(arr)
 }
 
 
@@ -157,8 +163,14 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(arr,flav){
+    let newarr=[];
+    for (let i=0;i<arr.length;i++){
+        if(arr[i].includes(flav)){
+            newarr.push(arr[i])
+        }
+    }
+    return(newarr)
 }
 
 
